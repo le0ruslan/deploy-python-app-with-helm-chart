@@ -1,0 +1,27 @@
+---
+replicasNumber: 1
+
+image:
+  repository: le0ruslan/backend-app:latest
+
+env:
+  POSTGRES_SERVER_HOST: "postgresql"
+  POSTGRES_PORT: "5432"
+  POSTGRES_DB: "appdb"
+  CLIENT_URL: "http://frontend-service"
+  SERVER_PORT: ":8081"
+  JWT_KEY: "secretive"
+  RUN_MIGRATION: "true"
+
+resources:
+  requests:
+    memory: "256Mi"
+    cpu: "250m"
+  limits:
+    memory: "256Mi"
+    cpu: "250m"
+
+service:
+  name: backend-service
+  type: ClusterIP
+  port: 8081

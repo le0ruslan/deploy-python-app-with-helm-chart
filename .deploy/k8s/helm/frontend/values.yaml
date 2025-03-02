@@ -1,0 +1,25 @@
+---
+replicasNumber: 1
+
+image:
+  repository: le0ruslan/front-app:latest
+
+service:
+  name: frontend-service 
+  type: LoadBalancer
+  port: 3000
+
+
+resources:
+  requests:
+    memory: "256Mi"
+    cpu: "250m"
+  limits:
+    memory: "256Mi"
+    cpu: "250m"
+
+ingress:
+  className: "nginx"
+
+nginx:
+  name: nginx-config
