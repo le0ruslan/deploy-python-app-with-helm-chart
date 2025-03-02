@@ -1,7 +1,7 @@
-# Deploy Python App with Helm chart
+# Deploy Golang App with Helm chart
 
 ## Project Description
-This repository implements the deployment of the application [devops-sample-django-app](https://github.com/simbirsoft/devops-sample-django-app) using Kind and Helm.
+This repository implements the deployment of the application using Kind and Helm.
 
 ## Installing kind
 
